@@ -1,0 +1,25 @@
+a{
+  color: rgb(27, 1, 177);
+  text-decoration: none;
+  position: relative;
+}
+
+a::before{
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  width: max-content;
+  margin-top: 0.5rem;
+  padding: 6px;
+  background: #000;
+  border-radius: 4px;
+  color: #fff;
+  opacity: 0;
+  display: none;
+}
+
+a:hover::before{
+  top: 100%;
+  opacity: 1;
+  display: inline;
+}
